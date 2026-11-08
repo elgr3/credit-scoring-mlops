@@ -1,4 +1,4 @@
-# Credit Scoring en production — pipeline MLOps
+# Credit Scoring en production : pipeline MLOps
 
 Projet portfolio de **Rody Brayan DAMA** (alternant AI / Data Engineer, BNP Paribas Cardif).
 
@@ -18,7 +18,7 @@ Le modèle estime la **probabilité de défaut (PD)** à partir de 20 variables 
 - **Seuil de décision piloté par le coût** : la matrice de coûts officielle du jeu fixe
   « accorder à un mauvais payeur » = 5 et « refuser un bon payeur » = 1. Le seuil bayésien
   optimal sur la PD est donc `1 / (1 + 5) ≈ 0,167` : on refuse dès que PD ≥ 16,7 %.
-  Ce choix est volontairement conservateur (taux de refus élevé) — il découle du coût, pas d'un
+  Ce choix est volontairement conservateur (taux de refus élevé) : il découle du coût, pas d'un
   réglage arbitraire.
 - **Monitoring** : en production, la population change (inflation des montants, nouveaux
   canaux de distribution…). On détecte le **drift** des variables (Evidently) et du score
@@ -65,11 +65,11 @@ Windows 11, Ryzen 7 5700U, Python 3.12, uvicorn 1 worker).
 | | Gini | **0,5129** |
 | | AUC validation croisée 5 folds (train) | 0,7939 |
 | | Coût métier moyen / dossier (seuil 0,167) | 0,52 (vs 1,50 en acceptant tout) |
-| API — charge (2 000 req., concurrence 20) | p50 | 124,6 ms |
+| API, charge (2 000 req., concurrence 20) | p50 | 124,6 ms |
 | | p95 | 1 239,01 ms |
 | | Débit | 62,1 req/s |
 | | Erreurs | 0 |
-| API — latence unitaire (2 000 req., concurrence 1) | p50 / p95 | 18,6 ms / 36,5 ms |
+| API, latence unitaire (2 000 req., concurrence 1) | p50 / p95 | 18,6 ms / 36,5 ms |
 | Qualité | Tests pytest | 63 (0 échec) |
 | | Couverture (lignes + branches) | 97,1 % |
 | Drift (prod simulée vs référence) | Colonnes en drift | 5 / 20 (share = 0,25) |
