@@ -1,0 +1,13 @@
+{
+  "requests": 2000,
+  "concurrency": 20,
+  "errors": 0,
+  "duration_s": 32.222,
+  "rps": 62.1,
+  "p50_ms": 124.6,
+  "p95_ms": 1239.01,
+  "p99_ms": 2392.94,
+  "mean_ms": 320.7,
+  "server_side_mean_ms": 32.79,
+  "server": "uvicorn 1 worker, localhost"
+}

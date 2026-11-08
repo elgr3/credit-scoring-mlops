@@ -1,0 +1,29 @@
+[project]
+name = "credit-scoring-mlops"
+version = "1.0.0"
+description = "Credit scoring en production : pipeline MLOps (XGBoost, MLflow, FastAPI, Evidently)"
+requires-python = ">=3.11"
+authors = [{ name = "Rody Brayan DAMA" }]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "N"]
+ignore = ["B008"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning", "ignore::FutureWarning", "ignore::UserWarning"]
+
+[tool.coverage.run]
+source = ["src/credit_scoring"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true

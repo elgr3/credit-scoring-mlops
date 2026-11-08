@@ -1,0 +1,6 @@
+# Entraînement + monitoring (inclut les dépendances d'inférence)
+-r requirements-api.txt
+mlflow==3.18.0
+scipy==1.18.1
+# Evidently 0.7.x importe une API interne retirée de pandas 3 -> pandas épinglé en 2.3.x
+evidently==0.7.23

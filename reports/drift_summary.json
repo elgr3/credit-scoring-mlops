@@ -1,0 +1,145 @@
+{
+  "scenario": "drifted",
+  "reference_rows": 800,
+  "current_rows": 200,
+  "dataset_drift": false,
+  "drift_share_threshold": 0.5,
+  "n_drifted_columns": 5,
+  "drift_share": 0.25,
+  "columns": {
+    "duration": {
+      "method": "K-S p_value",
+      "score": 4.583e-14,
+      "threshold": 0.05,
+      "drifted": true
+    },
+    "credit_amount": {
+      "method": "K-S p_value",
+      "score": 2.967e-10,
+      "threshold": 0.05,
+      "drifted": true
+    },
+    "installment_commitment": {
+      "method": "chi-square p_value",
+      "score": 0.4475,
+      "threshold": 0.05,
+      "drifted": false
+    },
+    "residence_since": {
+      "method": "chi-square p_value",
+      "score": 0.7589,
+      "threshold": 0.05,
+      "drifted": false
+    },
+    "age": {
+      "method": "K-S p_value",
+      "score": 1.598e-16,
+      "threshold": 0.05,
+      "drifted": true
+    },
+    "existing_credits": {
+      "method": "chi-square p_value",
+      "score": 0.3526,
+      "threshold": 0.05,
+      "drifted": false
+    },
+    "num_dependents": {
+      "method": "Z-test p_value",
+      "score": 0.1262,
+      "threshold": 0.05,
+      "drifted": false
+    },
+    "checking_status": {
+      "method": "chi-square p_value",
+      "score": 1.654e-13,
+      "threshold": 0.05,
+      "drifted": true
+    },
+    "credit_history": {
+      "method": "chi-square p_value",
+      "score": 0.0005655,
+      "threshold": 0.05,
+      "drifted": true
+    },
+    "purpose": {
+      "method": "chi-square p_value",
+      "score": 0.4655,
+      "threshold": 0.05,
+      "drifted": false
+    },
+    "savings_status": {
+      "method": "chi-square p_value",
+      "score": 0.4586,
+      "threshold": 0.05,
+      "drifted": false
+    },
+    "employment": {
+      "method": "chi-square p_value",
+      "score": 0.0535,
+      "threshold": 0.05,
+      "drifted": false
+    },
+    "personal_status": {
+      "method": "chi-square p_value",
+      "score": 0.8012,
+      "threshold": 0.05,
+      "drifted": false
+    },
+    "other_parties": {
+      "method": "chi-square p_value",
+      "score": 0.3885,
+      "threshold": 0.05,
+      "drifted": false
+    },
+    "property_magnitude": {
+      "method": "chi-square p_value",
+      "score": 0.129,
+      "threshold": 0.05,
+      "drifted": false
+    },
+    "other_payment_plans": {
+      "method": "chi-square p_value",
+      "score": 0.08146,
+      "threshold": 0.05,
+      "drifted": false
+    },
+    "housing": {
+      "method": "chi-square p_value",
+      "score": 0.2158,
+      "threshold": 0.05,
+      "drifted": false
+    },
+    "job": {
+      "method": "chi-square p_value",
+      "score": 0.9429,
+      "threshold": 0.05,
+      "drifted": false
+    },
+    "own_telephone": {
+      "method": "Z-test p_value",
+      "score": 0.723,
+      "threshold": 0.05,
+      "drifted": false
+    },
+    "foreign_worker": {
+      "method": "Z-test p_value",
+      "score": 0.5028,
+      "threshold": 0.05,
+      "drifted": false
+    }
+  },
+  "psi_numeric": {
+    "duration": 1.7791,
+    "credit_amount": 0.4488,
+    "installment_commitment": 0.0124,
+    "residence_since": 0.0033,
+    "age": 0.8901,
+    "existing_credits": 0.005,
+    "num_dependents": 0.0
+  },
+  "score_psi": 0.3932,
+  "score_psi_status": "drift",
+  "mean_pd_reference": 0.2993,
+  "mean_pd_current": 0.4235,
+  "html_report": "drift_report.html"
+}

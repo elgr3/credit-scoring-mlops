@@ -1,0 +1,24 @@
+# Environnements
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Outils
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Données (re-téléchargées depuis OpenML)
+data/
+
+# Tracking MLflow local et artefacts binaires (régénérés par `python -m credit_scoring.train`)
+mlruns/
+mlartifacts/
+mlflow.db
+models/*.joblib
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,11 @@
+{
+  "auc": 0.7564,
+  "gini": 0.5129,
+  "brier": 0.1798,
+  "accuracy_at_threshold": 0.62,
+  "business_cost_per_case": 0.52,
+  "rejection_rate": 0.61,
+  "baseline_cost_approve_all": 1.5,
+  "cv_auc_mean": 0.7939,
+  "cv_auc_std": 0.0602
+}
